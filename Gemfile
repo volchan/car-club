@@ -36,6 +36,7 @@ end
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'listen', '~> 3.3.3'
+  gem 'overcommit', '~> 0.57.0'
   gem 'rack-mini-profiler', '~> 2.2.0'
   gem 'rubocop', '~> 1.6.1', require: false
   gem 'rubocop-performance', '~> 1.9.1', require: false
