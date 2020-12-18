@@ -30,11 +30,6 @@ gem 'bootsnap', '~> 1.5.1', require: false
 
 gem 'haml-rails', '~> 2.0.1'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', '~> 11.1.3', platforms: [:mri, :mingw, :x64_mingw]
-end
-
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'better_errors', '~> 2.9.1'
@@ -55,6 +50,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.1'
   gem 'stackprof', '~> 0.2.16'
   gem 'web-console', '~> 4.1.0'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rubocop-rspec', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

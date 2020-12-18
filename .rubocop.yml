@@ -3,6 +3,7 @@ inherit_from:
 
 require:
   - rubocop-rails # rails cops extracted to separate gem in last version
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
