@@ -53,9 +53,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_bot_rails', '~> 6.1.0'
   gem 'rspec-rails', '~> 4.0.1'
-  gem 'rubocop-rspec', require: false
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'rubocop-rspec', '~> 2.1.0', require: false
+  gem 'shoulda-matchers', '~> 4.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
