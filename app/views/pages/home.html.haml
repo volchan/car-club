@@ -1,6 +1,7 @@
 -# frozen_string_literal: true
-%h1 Car Club
+.container
+  %h1 Car Club
 
--# checks if stimulus works
-%div{data: {controller: 'hello'}}
-  %p{data: {target: 'hello.output'}}
+  -# checks if stimulus works
+  %div{data: {controller: 'hello'}}
+    %p{data: {hello: {target: 'output'}}}
