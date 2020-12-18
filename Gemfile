@@ -35,13 +35,23 @@ end
 
 group :development do
   gem 'annotate', '~> 3.1.1'
+  gem 'better_errors', '~> 2.9.1'
+  gem 'binding_of_caller', '~> 0.8.0'
+  gem 'colorize', '~> 0.8.1'
+  gem 'faker', '~> 2.15.1'
+  gem 'flamegraph', '~> 0.9.5'
   gem 'listen', '~> 3.3.3'
+  gem 'memory_profiler', '~> 1.0.0'
   gem 'overcommit', '~> 0.57.0'
+  gem 'pry-byebug', '~> 3.9.0'
+  gem 'pry-rails', '~> 0.3.9'
   gem 'rack-mini-profiler', '~> 2.2.0'
   gem 'rubocop', '~> 1.6.1', require: false
   gem 'rubocop-performance', '~> 1.9.1', require: false
   gem 'rubocop-rails', '~> 2.9.1', require: false
   gem 'spring', '~> 2.1.1'
+  gem 'spring-watcher-listen', '~> 2.0.1'
+  gem 'stackprof', '~> 0.2.16'
   gem 'web-console', '~> 4.1.0'
 end
 
