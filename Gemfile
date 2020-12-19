@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.10.1'
 gem 'bootsnap', '~> 1.5.1', require: false
 
 gem 'haml-rails', '~> 2.0.1'
+gem 'redis', '~> 4.2.5'
+gem 'sidekiq', '~> 6.1.2'
+gem 'sidekiq-failures', '~> 1.0.0'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
