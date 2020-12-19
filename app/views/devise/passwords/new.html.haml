@@ -1,12 +1,11 @@
 -# frozen_string_literal: true
-%h2= t(".forgot_your_password")
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email,                       |
-      required: true,                       |
-      autofocus: true,                      |
-      input_html: { autocomplete: "email" } |
-  .form-actions
-    = f.button :submit, t(".send_me_reset_password_instructions")
-= render "devise/shared/links"
+.container.h-100.d-flex.justify-content-center.align-items-center
+  .col-12.col-md-6.mt-5
+    %h2.text-canter= t(".forgot_your_password")
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }
+      .form-actions
+        = f.button :submit, t(".send_me_reset_password_instructions"), class: 'btn btn-primary'
+    = render "devise/shared/links"
