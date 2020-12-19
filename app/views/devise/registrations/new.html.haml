@@ -8,6 +8,12 @@
         = f.input :firstname, required: true, autofocus: true, placeholder: 'John'
         = f.input :lastname, required: true, placeholder: 'Doe'
         = f.input :email, required: true, input_html: { autocomplete: "email" }, placeholder: 'john.doe@gmail.fr'
+        .form-group.file.optional.user_avatar
+          %label.file.optional{for: "user_avatar"} Avatar
+          .input-group.mb-3
+            .custom-file{data: {controller: 'upload'}}
+              = f.file_field :avatar, direct_upload: true, class: "custom-file-input", id: "user_avatar", accept: "image/*", data: {action: 'upload#updateFilename'}
+              = f.label "Choose file", class: "custom-file-label", aria: {describedby: "user_avatar"}, for: "user_avatar", data: {'upload-target': 'label'}
         = f.input :password, required: true, hint: (t('devise.shared.minimum_password_length', count: @minimum_password_length) if @minimum_password_length), input_html: { autocomplete: "new-password" }
         = f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" }
       .form-actions
