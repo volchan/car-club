@@ -1,0 +1,24 @@
+- firstname: David
+  lastname: <%= Faker::Name.last_name %>
+  email: <%= Faker::Internet.email %>
+  password: <%= Devise.friendly_token %>
+
+- firstname: Oliver
+  lastname: <%= Faker::Name.last_name %>
+  email: <%= Faker::Internet.email %>
+  password: <%= Devise.friendly_token %>
+  
+- firstname: Alan
+  lastname: <%= Faker::Name.last_name %>
+  email: <%= Faker::Internet.email %>
+  password: <%= Devise.friendly_token %>
+
+- firstname: Bart
+  lastname: <%= Faker::Name.last_name %>
+  email: <%= Faker::Internet.email %>
+  password: <%= Devise.friendly_token %>
+
+- firstname: Claudia
+  lastname: <%= Faker::Name.last_name %>
+  email: <%= Faker::Internet.email %>
+  password: <%= Devise.friendly_token %>

@@ -2,8 +2,8 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
-    def create
-      super { AvatarGenerator.call(resource) }
-    end
+    # def create
+    #   super { AvatarGenerator.call(resource) }
+    # end
   end
 end

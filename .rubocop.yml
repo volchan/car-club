@@ -30,6 +30,9 @@ Metrics/ClassLength:
 Style/Documentation:
   Enabled: false
 
+Style/SymbolArray:
+  EnforcedStyle: percent
+
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
 

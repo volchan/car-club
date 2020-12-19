@@ -28,11 +28,43 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  has_many :invitations,
+           class_name: 'Friendship',
+           dependent: :destroy,
+           inverse_of: :user
+
+  has_many :requests,
+           class_name: 'Friendship',
+           dependent: :destroy,
+           foreign_key: 'friend_id',
+           inverse_of: :friend
+
   validates :firstname, presence: true
   validates :lastname, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: Devise.email_regexp }
 
   after_create :generate_default_avatar
+
+  def friends
+    ids = [
+      *invitations.where(user_id: id, confirmed: true).pluck(:friend_id),
+      *requests.where(friend_id: id, confirmed: true).pluck(:user_id),
+    ]
+
+    User.where(id: ids)
+  end
+
+  def friend_with?(user)
+    Friendship.confirmed_record?(id, user.id)
+  end
+
+  def send_invitation(user)
+    invitations.create(friend_id: user.id)
+  end
+
+  def accept_request(user)
+    requests.pending.find_by(friend_id: id, user_id: user.id, confirmed: false).accept!
+  end
 
   private
 

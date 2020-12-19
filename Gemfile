@@ -46,8 +46,6 @@ group :development do
   gem 'listen', '~> 3.3.3'
   gem 'memory_profiler', '~> 1.0.0'
   gem 'overcommit', '~> 0.57.0'
-  gem 'pry-byebug', '~> 3.9.0'
-  gem 'pry-rails', '~> 0.3.9'
   gem 'rack-mini-profiler', '~> 2.2.0'
   gem 'rubocop', '~> 1.6.1', require: false
   gem 'rubocop-performance', '~> 1.9.1', require: false
@@ -61,6 +59,8 @@ end
 group :development, :test do
   gem 'factory_bot_rails', '~> 6.1.0'
   gem 'faker', '~> 2.15.1'
+  gem 'pry-byebug', '~> 3.9.0'
+  gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop-rspec', '~> 2.1.0', require: false
   gem 'shoulda-matchers', '~> 4.4.1'
