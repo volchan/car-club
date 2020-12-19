@@ -35,6 +35,7 @@ gem 'haml-rails', '~> 2.0.1'
 gem 'redis', '~> 4.2.5'
 gem 'sidekiq', '~> 6.1.2'
 gem 'sidekiq-failures', '~> 1.0.0'
+gem 'simple_form', '~> 5.0.3'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
