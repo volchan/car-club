@@ -1,0 +1,12 @@
+defaults: &defaults
+  cloud_name: <%= Rails.application.credentials[Rails.env.to_sym].dig(:CLOUDINARY, :CLOUD_NAME) %>
+  api_key: <%= Rails.application.credentials[Rails.env.to_sym].dig(:CLOUDINARY, :API_KEY) %>
+  api_secret: <%= Rails.application.credentials[Rails.env.to_sym].dig(:CLOUDINARY, :API_SECRET) %>
+  secure: true
+  cdn_subdomain: true
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
