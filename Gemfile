@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 6.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.2.3'
 # Use Puma as the app server
@@ -23,13 +23,14 @@ gem 'jbuilder', '~> 2.10.1'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.5.1', require: false
 
 gem 'cloudinary', '~> 1.18.1'
 gem 'devise', '~> 4.7.3'
+gem 'devise-i18n', '~> 1.9.2'
 gem 'haml-rails', '~> 2.0.1'
 gem 'redis', '~> 4.2.5'
 gem 'sidekiq', '~> 6.1.2'
@@ -40,7 +41,6 @@ group :development do
   gem 'better_errors', '~> 2.9.1'
   gem 'binding_of_caller', '~> 0.8.0'
   gem 'colorize', '~> 0.8.1'
-  gem 'faker', '~> 2.15.1'
   gem 'flamegraph', '~> 0.9.5'
   gem 'listen', '~> 3.3.3'
   gem 'memory_profiler', '~> 1.0.0'
@@ -59,6 +59,7 @@ end
 
 group :development, :test do
   gem 'factory_bot_rails', '~> 6.1.0'
+  gem 'faker', '~> 2.15.1'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop-rspec', '~> 2.1.0', require: false
   gem 'shoulda-matchers', '~> 4.4.1'
