@@ -29,6 +29,7 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '~> 1.5.1', require: false
 
 gem 'cloudinary', '~> 1.18.1'
+gem 'devise', '~> 4.7.3'
 gem 'haml-rails', '~> 2.0.1'
 gem 'redis', '~> 4.2.5'
 gem 'sidekiq', '~> 6.1.2'
