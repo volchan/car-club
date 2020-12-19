@@ -11,13 +11,13 @@
 #                            user_password PATCH  /users/password(.:format)                                                                         devise/passwords#update
 #                                          PUT    /users/password(.:format)                                                                         devise/passwords#update
 #                                          POST   /users/password(.:format)                                                                         devise/passwords#create
-#                 cancel_user_registration GET    /users/cancel(.:format)                                                                           devise/registrations#cancel
-#                    new_user_registration GET    /users/sign_up(.:format)                                                                          devise/registrations#new
-#                   edit_user_registration GET    /users/edit(.:format)                                                                             devise/registrations#edit
-#                        user_registration PATCH  /users(.:format)                                                                                  devise/registrations#update
-#                                          PUT    /users(.:format)                                                                                  devise/registrations#update
-#                                          DELETE /users(.:format)                                                                                  devise/registrations#destroy
-#                                          POST   /users(.:format)                                                                                  devise/registrations#create
+#                 cancel_user_registration GET    /users/cancel(.:format)                                                                           users/registrations#cancel
+#                    new_user_registration GET    /users/sign_up(.:format)                                                                          users/registrations#new
+#                   edit_user_registration GET    /users/edit(.:format)                                                                             users/registrations#edit
+#                        user_registration PATCH  /users(.:format)                                                                                  users/registrations#update
+#                                          PUT    /users(.:format)                                                                                  users/registrations#update
+#                                          DELETE /users(.:format)                                                                                  users/registrations#destroy
+#                                          POST   /users(.:format)                                                                                  users/registrations#create
 #                                     root GET    /                                                                                                 pages#home
 #            rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
 #               rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
@@ -47,6 +47,6 @@
 #                     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                                    active_storage/direct_uploads#create
 
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
 end

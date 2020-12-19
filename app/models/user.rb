@@ -31,4 +31,14 @@ class User < ApplicationRecord
   validates :firstname, presence: true
   validates :lastname, presence: true
   validates :email, presence: true, uniqueness: true
+
+  after_create :generate_default_avatar
+
+  private
+
+  def generate_default_avatar
+    return if avatar.attached?
+
+    AvatarGenerator.call(self)
+  end
 end
