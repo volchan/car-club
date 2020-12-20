@@ -1,9 +1,27 @@
 -# frozen_string_literal: true
-.container
-  %h1
-    %i.fas.fa-car
-    Car Club
+.d-flex.flex-row
+  .container.flex-grow-1
+    .row.mt-5
+      .col.text-center
+        %h1
+          %i.fas.fa-car
+          Car Club
 
-  -# checks if stimulus works
-  %div{data: {controller: 'hello'}}
-    %p{data: {hello: {target: 'output'}}}
+    .row.mt-3
+      .col-12.col-md-6.offset-md-3
+        = simple_form_for :search, url: '' do |f|
+          .input-group
+            = f.input :query, label: false, wrapper: false, placeholder: 'Rechercher un véhicule'
+            .input-group-append
+              = f.submit 'Rechercher', class: "btn btn-primary"
+
+
+  .members.mt-3
+    - @members.each do |user|
+      .user-card
+        .user-card-image{class: user.connected? ? 'connected' : ''}
+          = image_tag user.avatar, class: 'avatar'
+        %p.text-truncate #{user.full_name}
+        %span.text-muted (#{user.friends.size})
+
+
