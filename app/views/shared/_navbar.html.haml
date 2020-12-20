@@ -13,6 +13,6 @@
       .dropdown
         = image_tag current_user.avatar, id: 'profile', class: 'avatar dropdown-toggle', data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"}
         .dropdown-menu.dropdown-menu-right{aria: {labelledby: "profile"}}
-          = link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'dropdown-item'
+          = link_to t(:sign_out, scope: %I[devise sessions destroy]), destroy_user_session_path, method: :delete, class: 'dropdown-item'
     - else
-      = link_to 'Log In', new_user_session_path, class: 'btn btn-primary'
+      = link_to t(:sign_in, scope: %I[devise sessions new]), new_user_session_path, class: 'btn btn-primary'
