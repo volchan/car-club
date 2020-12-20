@@ -19,6 +19,14 @@
 #                                          DELETE /users(.:format)                                                                                  users/registrations#destroy
 #                                          POST   /users(.:format)                                                                                  users/registrations#create
 #                                     root GET    /                                                                                                 pages#home
+#                                     cars GET    /cars(.:format)                                                                                   cars#index
+#                                          POST   /cars(.:format)                                                                                   cars#create
+#                                  new_car GET    /cars/new(.:format)                                                                               cars#new
+#                                 edit_car GET    /cars/:slug/edit(.:format)                                                                        cars#edit
+#                                      car GET    /cars/:slug(.:format)                                                                             cars#show
+#                                          PATCH  /cars/:slug(.:format)                                                                             cars#update
+#                                          PUT    /cars/:slug(.:format)                                                                             cars#update
+#                                          DELETE /cars/:slug(.:format)                                                                             cars#destroy
 #            rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
 #               rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
 #            rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create
@@ -49,4 +57,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
+
+  resources :cars, param: :slug
 end

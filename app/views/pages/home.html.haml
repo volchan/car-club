@@ -1,6 +1,6 @@
 -# frozen_string_literal: true
 .d-flex.flex-row
-  .container.flex-grow-1
+  .container-fluid.flex-grow-1
     .row.mt-5
       .col.text-center
         %h1
@@ -8,15 +8,16 @@
           Car Club
 
     .row.mt-3
-      .col-12.col-md-6.offset-md-3
+      .col-12.col-md-10.offset-md-1.col-xl-6.offset-xl-3
         = simple_form_for :search, url: '' do |f|
           .input-group
             = f.input :query, label: false, wrapper: false, placeholder: 'Rechercher un véhicule'
             .input-group-append
               = f.submit 'Rechercher', class: "btn btn-primary"
+    
+    = render 'cars/list', cars: @last_cars
 
-
-  .members.mt-3
+  .members.mt-3.d-none.d-lg-block
     - @members.each do |user|
       .user-card
         .user-card-image{class: user.connected? ? 'connected' : ''}

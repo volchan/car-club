@@ -1,0 +1,13 @@
+-# frozen_string_literal: true
+.car
+  = link_to '', car_path(car.slug), class: 'car-link'
+  .car-image.shadow-sm.card{style: "background-image: url('#{url_for(car.header_image)}')"}
+  .car-infos.d-flex
+    .car-infos-left.flex-grow-1
+      %p.car-name= car.type_name
+      %p.car-location.text-muted
+        #{car.city}(#{car.state})
+    .car-infos-right.d-flex.align-items-center.justify-content-end
+      %p #{car.price_per_day} €
+
+
