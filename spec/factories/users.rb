@@ -26,7 +26,7 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 FactoryBot.define do
-  factory :user, aliases: %I[friend] do
+  factory :user, aliases: %I[friend owner] do
     sequence(:firstname) { Faker::Name.first_name }
     sequence(:lastname) { Faker::Name.last_name }
     sequence(:email) { Faker::Internet.email }

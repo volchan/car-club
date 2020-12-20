@@ -33,6 +33,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  has_many :cars, dependent: :destroy, inverse_of: :owner
+
   has_many :invitations,
            class_name: 'Friendship',
            dependent: :destroy,

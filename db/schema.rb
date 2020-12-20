@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,10 +12,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_20_143338) do
+ActiveRecord::Schema.define(version: 2020_12_20_180347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,6 +53,37 @@ ActiveRecord::Schema.define(version: 2020_12_20_143338) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.integer "year"
+    t.integer "seats"
+    t.integer "engine"
+    t.integer "power"
+    t.integer "price_per_day"
+    t.integer "postal_code"
+    t.integer "highlighted"
+    t.integer "car_grade_given_by_users"
+    t.string "transmission"
+    t.string "propulsion"
+    t.string "mileage"
+    t.string "body_style"
+    t.string "city"
+    t.string "zipcode"
+    t.string "country"
+    t.string "state"
+    t.string "street"
+    t.string "number_plate"
+    t.string "slug"
+    t.string "fuel_type"
+    t.string "brand"
+    t.string "type_name", default: "", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_cars_on_slug", unique: true
+    t.index ["type_name"], name: "index_cars_on_type_name", unique: true
+    t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -74,5 +117,6 @@ ActiveRecord::Schema.define(version: 2020_12_20_143338) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cars", "users"
   add_foreign_key "friendships", "users"
 end

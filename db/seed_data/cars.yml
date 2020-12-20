@@ -1,0 +1,289 @@
+- year: 2008
+  seats: 2
+  transmission: Auto
+  propulsion: Propulsion
+  mileage: 50-100 000 km
+  engine: 6
+  power: 380
+  price_per_day: 350
+  body_style: Cab./Targa
+  description_user: <p><strong>Etat</strong>&nbsp;<strong>exceptionnel&nbsp;</strong>pour cette Superbe 911 Carrera 997 Cabriolet S dans&nbsp;une excellente configuration + Boite PDK.</p><p>Une ligne unique, un son unique, en un mot une legende roulante.</p><p>La 997 est considérée comme la plus réussie des 911 des 15 dernières années, avec son moteur atmosphérique et sa ligne proche de la perfection.&nbsp;</p><p>Roulez cheveux au vent en profitant du son magique du flat 6 Porsche, de la boite ultra rapide PDK, des 385 CH disponible à tout moment, dans un confort et une tenue de route juste parfaite... Le&nbsp;grand frisson.</p>
+  city: Courbevoie
+  zipcode: null
+  country: France
+  street: 9 Rue Paul Napoléon Roinard
+  type_name: 911 Carrera S Cabriolet - 997
+  number_plate: FS-699-VM
+  slug: porsche-911-carrera-s-cabriolet-997-2008-courbevoie
+  brand: Porsche
+  postal_code: 92400
+  car_grade_given_by_users: 5.0
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/911cs1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/911cs1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/911cs2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/911cs3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Alan').id %>
+
+- year: 1986
+  seats: 2
+  transmission: Manuelle
+  propulsion: Propulsion
+  mileage: 100-200 000 km
+  engine: 6
+  power: 250
+  price_per_day: 285
+  body_style: Coupé
+  description_user: <p>911 Targa 3.2 G50 de 1986 en excellent état.</p><p>Toit amovible manuellement pour passer en cabriolet.&nbsp;</p><p>Idéal&nbsp;pour un mariage</p>
+  city: Falicon
+  zipcode: null
+  country: France
+  street: 442 route de l aire st Michel Domaine de la bastide
+  type_name: 911 Type G 3.2L
+  brand: Porsche
+  number_plate: EX-382-YF
+  slug: porsche-911-type-g-3-2l-1986-falicon
+  postal_code: 06950
+  state: Provence-Alpes-Côte d'Azur
+  car_grade_given_by_users: 5.0
+  fuel_type: Essence sans plomb
+  header_image: <%= Rails.root.join('db/seed_data/911g1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/911g1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/911g2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/911g3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Claudia').id %>
+
+- year: 1976
+  seats: 4
+  transmission: Manuelle
+  propulsion: Traction
+  mileage: 20-50 000 km
+  engine: 2
+  power: 30
+  price_per_day: 90
+  body_style: Cab./Targa
+  description_user: <p>Cette 2CV AZS de 1976 a été achetée en 1984 après un long stockage dans une grange. Elle a été entièrement refaite, châssis galvanisé, ailes portes capot intérieur, sellerie et peinture "bleu lagune" d'origine.</p><p>Elle a un moteur 625 cc, qui en fait une vraie fusée. Attention, elle a gardé...</p>
+  city: Lyon
+  zipcode: 69001
+  country: France
+  street: 8 Cours général Giraud
+  type_name: 2CV AZS
+  number_plate: DK195CB
+  highlighted: 21
+  slug: citroen-2cv-azs-1976-lyon
+  brand: Citroen
+  postal_code: 69001
+  state: Auvergne-Rhône-Alpes
+  car_grade_given_by_users: 5.0
+  fuel_type: Super
+  header_image: <%= Rails.root.join('db/seed_data/2cv1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/2cv1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/2cv2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/2cv3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Bart').id %>
+
+- year: 2002
+  seats: 4
+  transmission: Manuelle
+  propulsion: 4x4
+  mileage: 50-100 000 km
+  engine: 4
+  power: 120
+  price_per_day: 150
+  body_style: Cab./Targa
+  description_user: <p><strong>+20 € pour livraison à l'aéroport</strong></p><p>Authentique wrangler au look vintage et à l'agrément de conduite moderne, confortable, facile à conduire et très agréable. Ce véhicule est idéal pour profiter de notre magnifique région, Look simple et efficace. Configuration sur demande...</p>
+  city: Nice
+  zipcode: null
+  country: France
+  street: 27 Rue du Docteur Fighiera
+  type_name: Wrangler 
+  number_plate: WW-052-XY
+  slug: jeep-wrangler-2002-nice
+  brand: Jeep
+  postal_code: 06300
+  state: Provence-Alpes-Côte d'Azur
+  car_grade_given_by_users: 5.0
+  fuel_type: Sp98
+  header_image: <%= Rails.root.join('db/seed_data/jeepw1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/jeepw1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jeepw2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jeepw3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'David').id %>
+
+- year: 2016
+  seats: 2
+  transmission: Auto
+  propulsion: 4x4
+  mileage: 20-50 000 km
+  engine: 6
+  power: 380
+  price_per_day: 390
+  body_style: Cab./Targa
+  description_user: Je mets mon véhicule en location car je ne l’utilise pas tous les jours. Je ne loue pas pour les mariages ou autre événement et je demande un minimum de 10 ans de permis de conduire. Je ne loue qu’à des personnes qui ont un passeport français et qui sont responsables et passionnés. Merci de votre compréhension
+  city: Paris
+  zipcode: null
+  country: France
+  street: 5 Rue Greffulhe
+  type_name: F-Type Sport
+  number_plate: AW CM 130
+  slug: jaguar-f-type-sport-2016-paris
+  brand: Jaguar
+  postal_code: 75008
+  state: Île-de-France
+  car_grade_given_by_users: 4.6
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/jagf1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/jagf1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jagf2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jagf3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Oliver').id %>
+
+- year: 1968
+  seats: 4
+  transmission: Auto
+  propulsion: 
+  mileage: 50-100 000 km
+  engine: 6
+  power: 210
+  price_per_day: 610
+  body_style: Coupé
+  description_user: La Jaguar Type E (appelée Jaguar E-Type au Royaume-Uni et Jaguar XK-E aux États-Unis) est une voiture de sport fabriquée par le constructeur automobile britannique Jaguar dans les années 1960 et 1970. La Type E, bien que rappelant la Jaguar D-Type du point de vue de sa ligne, est pour l’époque d’une conception très moderne. Plus de 70 000 exemplaires de Type E seront vendus, constituant ainsi l’un des plus grands succès commerciaux de Jaguar. Son allure et ses performances, qui la distinguaient des autres voitures du même segment, en ont fait aujourd’hui un mythe automobile symbolisant les Swinging Sixties.
+  city: Puteaux
+  zipcode: null
+  country: France
+  street: 31 rue lavoisier
+  type_name: Type E Série 2 Coupe
+  number_plate: DG-447-YQ
+  slug: jaguar-type-e-serie-2-coupe-1968-puteaux
+  brand: Jaguar
+  postal_code: 92800
+  state: Île-de-France
+  car_grade_given_by_users: 5.0
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/jage1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/jage1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jage2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/jage3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'David').id %>
+
+- year: 1966
+  seats: 2
+  transmission: Manuelle
+  propulsion: Propulsion
+  mileage: 100-200 000 km
+  engine: 6
+  power: 150
+  price_per_day: 285
+  body_style: Cab./Targa
+  description_user: "<p>Bon état général. Elle dispose d'une capote étanche en cas de pluie. Prix: Attention, le tarif de 285€/jour est valable pour une location we 2 jours, soit 540€ pour le we et 300km (pas de location à la journée en we); le tarif pour une journée en semaine est de 340€ ttc et 150km.</p><p><strong>150kms /jour maximum</strong></p>"
+  city: Vaulx-en-Velin
+  zipcode: null
+  country: France
+  street: 18 rue louis saillant zi la rize 69120 vaulx en velin
+  type_name: Pagode SL 230 (R113)
+  number_plate: W 940 HM
+  slug: mercedes-pagode-sl-230-r113-1966-vaulx-en-velin
+  brand: Mercedes
+  postal_code: 69120
+  state: Auvergne-Rhône-Alpes
+  car_grade_given_by_users: 4.0
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/merp1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/merp1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/merp2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/merp3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Claudia').id %>
+
+- year: 1986
+  seats: 2
+  transmission: Manuelle
+  propulsion: Propulsion
+  mileage: 100-200 000 km
+  engine: 8
+  power: 270
+  price_per_day: 370
+  body_style: Cab./Targa
+  description_user: "<p>Bon état général. Pas de clim. Toit amovible très agréable en été. Prix: Attention, le tarif de 370€/jour est valable pour une location we 2 jours, soit 700€ pour le we et 300km (pas de location à la journée en we); le tarif pour une journée en semaine est de 420€ ttc et 150km.</p>"
+  city: Vaulx-en-Velin
+  zipcode: null
+  country: France
+  street: 18 rue louis saillant zi la rize 69120 vaulx en velin
+  type_name: 328 GTS
+  number_plate: 734 BCZ 69
+  slug: ferrari-328-gts-1986-vaulx-en-velin
+  brand: Ferrari
+  postal_code: 69120
+  state: Auvergne-Rhône-Alpes
+  car_grade_given_by_users: 4.0
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/f3281.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/f3281.jpg') %>
+    - <%= Rails.root.join('db/seed_data/f3282.jpg') %>
+    - <%= Rails.root.join('db/seed_data/f3283.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Bart').id %>
+
+- year: 1958
+  seats: 2
+  transmission: Manuelle
+  propulsion: Propulsion
+  mileage: 20-50 000 km
+  engine: 4
+  power: 100
+  price_per_day: 440
+  body_style: Cab./Targa
+  description_user: <p><strong>Proche métro La Défense</strong> (ligne 1)<strong>. </strong>Forfait week-end du samedi matin au lundi matin (pas le dimanche).</p><p>Véhicule de collection TR3 A, noir, intérieur rouge brique, entièrement restaurée depuis le châssis en 2012, état concours. Johnny Halliday a possédé le même modèle. Très agréable à conduire, son charme ne vous laissera pas indifférent.</p>
+  city: Courbevoie
+  zipcode: null
+  country: France
+  street: Rue Paul Napoléon Roinard
+  type_name: TR3 A
+  number_plate: DD829CE
+  slug: triumph-tr3-a-1958-courbevoie
+  brand: Triumph
+  postal_code: 92400
+  state: Île-de-France
+  car_grade_given_by_users: 5.0
+  fuel_type: SP98
+  header_image: <%= Rails.root.join('db/seed_data/triu1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/triu1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/triu2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/triu3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Alan').id %>
+
+- year: 1981
+  seats: 4
+  transmission: Manuelle
+  propulsion: Propulsion
+  mileage: 50-100 000 km
+  engine: 8
+  power: 240
+  price_per_day: 495
+  body_style: Coupé
+  description_user: <p>J'ai découvert ce modèle de Ferrari via un ami, qui me l'a prêtée pour mon mariage. J'en suis tombé amoureux, et ai décidé d'un acheter un exemplaire.</p><p>Cette magnifique Ferrari Mondial 3.2 de 57 000 km est Rosso Corsa (le rouge Ferrari) en extérieur et noire en intérieur. Elle accueille deux passagers (peu encombrants ;) à l’arrière. Elle est parfaite pour des balades à la campagne, une virée à Deauville, ou une sortie de mariage!</p><p>A noter que ce modèle n’était pas encore doté de la direction assistée.</p><p>Je l’entretien scrupuleusement et roule régulièrement avec sans aucun problème.</p>
+  city: Eringhem
+  zipcode: null
+  country: France
+  street: 1780 Voie Communale Verroere Straete Voie communale 5
+  type_name: Mondial
+  number_plate: BL-983-VZ
+  slug: ferrari-mondial-1981-eringhem
+  brand: Ferrari
+  postal_code: 59470
+  state: Hauts-de-France
+  car_grade_given_by_users: 5.0
+  fuel_type: ''
+  header_image: <%= Rails.root.join('db/seed_data/fm1.jpg') %>
+  images:
+    - <%= Rails.root.join('db/seed_data/fm1.jpg') %>
+    - <%= Rails.root.join('db/seed_data/fm2.jpg') %>
+    - <%= Rails.root.join('db/seed_data/fm3.jpg') %>
+  user_id: <%= User.find_by(firstname: 'Oliver').id %>
