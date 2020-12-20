@@ -31,6 +31,7 @@ gem 'bootsnap', '~> 1.5.1', require: false
 gem 'cloudinary', '~> 1.18.1'
 gem 'devise', '~> 4.7.3'
 gem 'devise-i18n', '~> 1.9.2'
+gem 'faker', '~> 2.15.1'
 gem 'haml-rails', '~> 2.0.1'
 gem 'pundit', '~> 2.1.0'
 gem 'rails-i18n', '~> 6.0.0'
@@ -60,7 +61,6 @@ end
 
 group :development, :test do
   gem 'factory_bot_rails', '~> 6.1.0'
-  gem 'faker', '~> 2.15.1'
   gem 'pry-byebug', '~> 3.9.0'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 4.0.1'
