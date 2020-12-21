@@ -3,6 +3,9 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid black;
+  &.light {
+    border: 1px solid rgba(255, 255, 255, .50);
+  }
   &.dropdown-toggle {
     cursor: pointer;
   }

@@ -1,0 +1,5 @@
+-# frozen_string_literal: true
+.members.mt-3.d-none.d-lg-block
+  - members.each do |user|
+    = render user do
+      %span.text-muted (#{user.friends.size})

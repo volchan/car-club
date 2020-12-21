@@ -1,34 +1,34 @@
 .members {
   padding: 10px;
   width: 250px;
-  .user-card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
+}
+.user-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-image {
+    position: relative;
+    &::before {
+      @extend .text-danger;
+      position: absolute;
+      content: '•';
+      font-size: 3rem;
+      top: -37px;
+      right: -7px;
     }
-    &-image {
-      position: relative;
+    &.connected {
       &::before {
-        @extend .text-danger;
-        position: absolute;
-        content: '•';
-        font-size: 3rem;
-        top: -37px;
-        right: -7px;
-      }
-      &.connected {
-        &::before {
-          @extend .text-success;
-        }
+        @extend .text-success;
       }
     }
-    p {
-      font-size: 14px;
-      margin: 0;
-      margin-left: 10px;
-      margin-right: 5px;
-    }
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 5px;
   }
 }

@@ -17,12 +17,6 @@
     
     = render 'cars/list', cars: @last_cars
 
-  .members.mt-3.d-none.d-lg-block
-    - @members.each do |user|
-      .user-card
-        .user-card-image{class: user.connected? ? 'connected' : ''}
-          = image_tag user.avatar, class: 'avatar'
-        %p.text-truncate #{user.full_name}
-        %span.text-muted (#{user.friends.size})
+  = render 'users/members_list', members: @members
 
 

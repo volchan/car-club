@@ -1,0 +1,12 @@
+.slideshow {
+  overflow-x: scroll;
+
+  img {
+    height: 320px;
+    width: 590px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

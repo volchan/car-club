@@ -1,0 +1,19 @@
+-# frozen_string_literal: true
+.d-flex.flex-row
+  .container.mt-3
+    .col-12.col-md-10.offset-md-1.col-xl-8.offset-xl-2
+      %h1.font-weight-bold= @car.type_name
+      %p.font-weight-bold #{@car.price_per_day}€ par jour.
+      .mt-3= @car.description_user
+
+      .d-flex.d-flex-column.mt-3
+        = render @car.owner
+
+    .slideshow.d-flex.pb-3.mt-3
+      - @car.images.each do |image|
+        = image_tag image
+
+    .col-12.col-md-10.offset-md-1
+      = render 'cars/percs', car: @car
+
+  = render 'users/members_list', members: @members

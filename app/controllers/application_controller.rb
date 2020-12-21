@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname, :avatar])
   end
+
+  private
+
+  def fetch_members
+    @members = User.order(:lastname).where.not(id: current_user.id)
+  end
 end

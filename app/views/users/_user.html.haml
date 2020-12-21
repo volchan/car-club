@@ -1,0 +1,6 @@
+-# frozen_string_literal: true
+.user-card
+  .user-card-image{class: user.connected? ? 'connected' : ''}
+    = image_tag user.avatar, class: 'avatar'
+  %p.text-truncate #{user.full_name}
+  = yield
